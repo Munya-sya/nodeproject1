@@ -64,10 +64,12 @@
         <input id=weight type=number value=150 oninput=slider.value=value;bmi()>
         <input id=slider type=range min=0 max=350 value=185 oninput=weight.value=value;bmi()>
         <h3>Height</h3>
-        <span>Feet</span>
-        <input id=feet type=number value=6 onchange=bmi()>
+     
+        <input id=feet type=hidden value=6 onchange=bmi() >
         <span>Inches</span>
-        <input id=inches type=number value=0 onchange=bmi()>
+        <input id=slider type=range min=0 max=15 value=7 oninput=inches.value=value;bmi()>
+        <input id=inches type=number value=0  oninput=inches.value=value;bmi() onchange=bmi()>
+
         <output></output>
       </div>
       <script>
