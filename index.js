@@ -36,10 +36,16 @@ app.post('/process-data', urlEncodedParser, function(request, response){
             };
             data.push(info);
             fs.writeFileSync(fileName, JSON.stringify(data, null, 2));
-                  
+             
+            calculate(request.body.weight, request.body.height);     
+            
             response.render('results', info);
+        
 });
-
+function calculate(weight, height){
+    return weight/(height*height);
+}
+module.exports = {calculate};
 app.listen(port);
 console.log(`server listening on port ${port}`);
 console.log('Node server started on port 3000');
