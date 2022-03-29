@@ -18,6 +18,7 @@ app.use(express.static('public'));
 app.get('/', function(request, response){
     response.render('home');
 });
+
 app.get('/process-data', function (request, response) {
     data.sort((a, b) => (a.name > b.name) ? 1 : -1);
     response.send(data);
