@@ -64,5 +64,16 @@
     "height": "0.8",
     "BMI": "",
     "Summary": ""
+  },
+  {
+    "weight": "57",
+    "height": "0.6",
+    "BMI": "",
+    "Summary": "",
+    "_locals": {}
+  },
+  {
+    "weight": "71",
+    "height": "0.9"
   }
 ]

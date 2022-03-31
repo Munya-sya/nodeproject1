@@ -23,12 +23,19 @@
             <br><br>
             
             <input type="submit" value="Submit"/><br><br>
-            <input type="hidden"  id="result" name="BMI" />
-            <input type="hidden" id="results" name="diagnosis"/>
-            <p>The BMI result is <span class="text-light" id="BMI"></span> and the diagnosis is <span class="text-light" id="diagnosis"></span></p>  
+            <p>The BMI result is <span class="text-dark" id="BMI"></span> and the diagnosis is <span class="text-dark" id="diagnosis"></span></p>  
         </form>
         </center>
        </div>
-       
+       <script>
+           function calculateBMI(){
+        var height = document.getElementById("height").value;
+         var weight = document.getElementById("weight").value;
+
+         document.getElementById("BMI").innerHTML = calculate(height,weight);
+        document.getElementById("diagnosis").innerHTML =diagnose(calculate(height,weight));
+        }
+      
+       </script>
     </body>
 </html>
